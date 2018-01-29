@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +20,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lqd-yh-YWl" userLabel="Top View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="333.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="artBoard" translatesAutoresizingMaskIntoConstraints="NO" id="2GD-go-34B">
+                                        <rect key="frame" x="67" y="102" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="AG7-ON-tXI"/>
+                                            <constraint firstAttribute="height" constant="128" id="gjz-2x-9ho"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="tintColor" red="0.086274509799999996" green="0.62745098040000002" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="2GD-go-34B" firstAttribute="centerY" secondItem="Lqd-yh-YWl" secondAttribute="centerY" id="BFr-Xg-mxb"/>
+                                    <constraint firstItem="2GD-go-34B" firstAttribute="centerX" secondItem="Lqd-yh-YWl" secondAttribute="centerX" id="IcX-7F-Wox"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYi-fg-Shm" userLabel="Bottom View">
+                                <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notebook" translatesAutoresizingMaskIntoConstraints="NO" id="zdg-RL-LjQ">
+                                        <rect key="frame" x="67" y="102.5" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="e1G-Og-l9B"/>
+                                            <constraint firstAttribute="width" constant="240" id="lKu-hb-Ofg"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zdg-RL-LjQ" firstAttribute="centerY" secondItem="xYi-fg-Shm" secondAttribute="centerY" id="7bN-6S-FIb"/>
+                                    <constraint firstItem="zdg-RL-LjQ" firstAttribute="centerX" secondItem="xYi-fg-Shm" secondAttribute="centerX" id="QpY-fQ-cH3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xYi-fg-Shm" firstAttribute="leading" secondItem="Lqd-yh-YWl" secondAttribute="leading" id="25v-xu-rxx"/>
+                            <constraint firstItem="xYi-fg-Shm" firstAttribute="top" secondItem="Lqd-yh-YWl" secondAttribute="bottom" id="3IA-Fk-Qzf"/>
+                            <constraint firstItem="Lqd-yh-YWl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AB5-GJ-J91"/>
+                            <constraint firstItem="Lqd-yh-YWl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IQp-uD-kDT"/>
+                            <constraint firstItem="xYi-fg-Shm" firstAttribute="trailing" secondItem="Lqd-yh-YWl" secondAttribute="trailing" id="Nfa-fl-3vl"/>
+                            <constraint firstItem="xYi-fg-Shm" firstAttribute="top" secondItem="Lqd-yh-YWl" secondAttribute="bottom" id="QVQ-N8-E7Q"/>
+                            <constraint firstAttribute="trailing" secondItem="Lqd-yh-YWl" secondAttribute="trailing" id="Sob-1p-bUC"/>
+                            <constraint firstItem="xYi-fg-Shm" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Xhr-EC-252"/>
+                            <constraint firstItem="Lqd-yh-YWl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hBi-1G-wau"/>
+                            <constraint firstItem="xYi-fg-Shm" firstAttribute="height" secondItem="Lqd-yh-YWl" secondAttribute="height" id="isP-Z3-gm8"/>
+                            <constraint firstItem="Lqd-yh-YWl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ku4-Ao-AaV"/>
+                            <constraint firstAttribute="trailing" secondItem="Lqd-yh-YWl" secondAttribute="trailing" id="oOk-AR-q7w"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="artBoard" width="433" height="533"/>
+        <image name="notebook" width="373" height="527"/>
+    </resources>
 </document>
